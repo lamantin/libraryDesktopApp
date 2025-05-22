@@ -252,6 +252,16 @@ def delete_selected_user():
 
 tk.Button(tabs["Felhasználó törlése"], text="Felhasználó törlése", command=delete_selected_user).pack(pady=5)
 
+# === Info fül tartalma ===
+info_label = tk.Label(
+    tabs["Info"],
+    text="Készítette: Makai István\nÉv: 2025\nEmail: istvan.makai@gmail.com",
+    justify="center",
+    font=("Arial", 12),
+    pady=20
+)
+info_label.pack(expand=True)
+
 # === Helper függvény a kölcsönzéshez való frissítéshez ===
 def refresh_borrow_data():
     conn = sqlite3.connect("library.db")
